@@ -14,6 +14,7 @@ class ProjetosSerializer(serializers.ModelSerializer):
         model = Projeto
         fields = '__all__'
 
+
 class GrupoSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -36,7 +37,7 @@ class AvaliacaoGrupoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AvaliacaoGrupo
-        fields = '__all__'
+        fields = ('pk','avaliador','criterio','nota','grupo')
 
 class AvaliacaoAlunoSerializer(serializers.ModelSerializer):
 
